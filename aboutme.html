@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Landing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom scrollbar */
+        
+         ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+         ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        
+         ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+        
+         ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+        /* Animation for the hero section */
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fade-in {
+            animation: fadeIn 1s ease-out forwards;
+        }
+        /* Gradient background */
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        /* Social media icons hover effect */
+        
+        .social-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            transform: translateY(-5px) scale(1.1);
+        }
+    </style>
+</head>
+
+<body class="font-sans bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-indigo-600">My<span class="text-purple-600">Page</span></a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="text-gray-700 hover:text-indigo-600 transition">Home</a>
+                <a href="#about" class="text-gray-700 hover:text-indigo-600 transition">About</a>
+                <a href="#contact" class="text-gray-700 hover:text-indigo-600 transition">Contact</a>
+            </div>
+            <button class="md:hidden focus:outline-none" id="menu-btn">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden bg-white w-full px-6 py-3" id="mobile-menu">
+            <a href="#home" class="block py-2 text-gray-700 hover:text-indigo-600 transition">Home</a>
+            <a href="#about" class="block py-2 text-gray-700 hover:text-indigo-600 transition">About</a>
+            <a href="#contact" class="block py-2 text-gray-700 hover:text-indigo-600 transition">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg text-white pt-32 pb-20 px-6">
+        <div class="container mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0 animate-fade-in">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Hi, I'm <span class="text-yellow-300">Yamen Dahech</span></h1>
+                <h2 class="text-2xl md:text-3xl font-semibold mb-6">Student</h2>
+                <p class="text-lg mb-8 opacity-90">Welcome to my personal landing page. I'm passionate about what I do and excited to share my journey with you.</p>
+                <div class="flex space-x-4">
+                    <a href="#about" class="bg-white text-indigo-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition">Learn More</a>
+                    <a href="#contact" class="border-2 border-white text-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-indigo-600 transition">Contact Me</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center animate-fade-in" style="animation-delay: 0.3s;">
+                <div class="relative">
+                    <div class="w-64 h-64 md:w-80 md:h-80 rounded-full bg-white bg-opacity-20 absolute -top-4 -left-4"></div>
+                    <div class="w-64 h-64 md:w-80 md:h-80 rounded-full bg-white bg-opacity-10 absolute -bottom-4 -right-4"></div>
+                    <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" alt="Profile" class="relative w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-white shadow-xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-6 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-800">About <span class="text-indigo-600">Me</span></h2>
+
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <h3 class="text-2xl font-semibold mb-4">Who I Am</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        I'm a college student with a strong passion for creativity and finance. I enjoy bringing ideas to life through video editing and graphic design, where I can express my creativity and attention to detail. Alongside my creative work, I'm also deeply interested
+                        in trading, constantly learning and exploring the markets to build my skills in financial analysis and decision-making. These interests keep me motivated and always eager to grow both artistically and intellectually.
+
+
+                    </p>
+
+                    <div class="flex flex-wrap gap-4 mt-8">
+                        <div class="bg-indigo-50 px-4 py-2 rounded-lg">
+                            <span class="font-medium text-indigo-700">Web Development</span>
+                        </div>
+                        <div class="bg-purple-50 px-4 py-2 rounded-lg">
+                            <span class="font-medium text-purple-700">Graphic Design</span>
+                        </div>
+                        <div class="bg-blue-50 px-4 py-2 rounded-lg">
+                            <span class="font-medium text-blue-700">Video Editing</span>
+                        </div>
+                        <div class="bg-green-50 px-4 py-2 rounded-lg">
+                            <span class="font-medium text-green-700">Trading</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:w-1/2 bg-gray-50 p-8 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-6 text-center">My Skills</h3>
+
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Adobe Premier Pro</span>
+                                <span class="font-medium">90%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-indigo-600 h-2.5 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Adobe After Effect</span>
+                                <span class="font-medium">55%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-purple-600 h-2.5 rounded-full" style="width: 55%"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Adobe Photoshop</span>
+                                <span class="font-medium">65%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-blue-600 h-2.5 rounded-full" style="width: 65%"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Sony Vegas</span>
+                                <span class="font-medium">60%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-green-600 h-2.5 rounded-full" style="width: 60%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section class="py-16 px-6 bg-gray-50">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-800">Connect With <span class="text-indigo-600">Me</span></h2>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
+                <!-- Twitter -->
+                <a href="#" class="bg-blue-400 hover:bg-blue-500 text-white p-6 rounded-xl text-center transition transform hover:-translate-y-1 shadow-md">
+                    <i class="fab fa-twitter text-4xl mb-3 social-icon"></i>
+                    <h3 class="font-semibold text-lg">Twitter</h3>
+                    <p class="text-sm opacity-90 mt-1">@notfound</p>
+                </a>
+
+                <!-- LinkedIn -->
+                <a href="https://www.facebook.com/yamen.dahech.10/" class="bg-blue-600 hover:bg-blue-700 text-white p-6 rounded-xl text-center transition transform hover:-translate-y-1 shadow-md">
+                    <i class="fab fa-facebook-f text-4xl mb-3 social-icon"></i>
+
+                    <h3 class="font-semibold text-lg">Facebook</h3>
+                    <p class="text-sm opacity-90 mt-1">yamen dahech</p>
+                </a>
+
+                <!-- GitHub -->
+                <a href="https://github.com/sisko777" class="bg-gray-800 hover:bg-black text-white p-6 rounded-xl text-center transition transform hover:-translate-y-1 shadow-md">
+                    <i class="fab fa-github text-4xl mb-3 social-icon"></i>
+                    <h3 class="font-semibold text-lg">GitHub</h3>
+                    <p class="text-sm opacity-90 mt-1">sisko777</p>
+                </a>
+
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/yamen._.d/" class="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white p-6 rounded-xl text-center transition transform hover:-translate-y-1 shadow-md">
+                    <i class="fab fa-instagram text-4xl mb-3 social-icon"></i>
+                    <h3 class="font-semibold text-lg">Instagram</h3>
+                    <p class="text-sm opacity-90 mt-1">@yamen._.d</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section id="contact" class="py-16 px-6 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-800">Find <span class="text-indigo-600">Me</span></h2>
+
+            <div class="flex flex-col md:flex-row gap-10">
+                <div class="md:w-1/2">
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                        <!-- Replace with your actual location coordinates -->
+                        <iframe width="100%" src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d984.4061543550529!2d9.76408626965295!3d37.15480706712869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzfCsDA5JzE3LjMiTiA5wrA0NSc1My4wIkU!5e1!3m2!1sen!2stn!4v1754097391495!5m2!1sen!2stn"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+
+                <div class="md:w-1/2">
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-lg h-full">
+                        <h3 class="text-2xl font-semibold mb-6">Contact Information</h3>
+
+                        <div class="space-y-5">
+                            <div class="flex items-start">
+                                <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-map-marker-alt text-indigo-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Location</h4>
+                                    <p class="text-gray-600">Tinja, Tunisia, Tinjah</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="bg-purple-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-envelope text-purple-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Email</h4>
+                                    <p class="text-gray-600">yamendahech.1@gmail.com</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-phone text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Phone</h4>
+                                    <p class="text-gray-600">+216 99415341</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-10 px-6">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <a href="#" class="text-2xl font-bold text-white">My<span class="text-indigo-400">Page</span></a>
+                    <p class="mt-2 text-gray-400">© 2025 All rights reserved.</p>
+                </div>
+
+            </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+
+                // Close mobile menu if open
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Initialize map (using Leaflet.js)
+        function initMap() {
+            // Create a script element to load Leaflet CSS
+            const leafletCSS = document.createElement('link');
+            leafletCSS.rel = 'stylesheet';
+            leafletCSS.href = 'https://unpkg.com/leaflet@1.7.1/dist/leaflet.css';
+            document.head.appendChild(leafletCSS);
+
+            // Create a script element to load Leaflet JS
+            const leafletJS = document.createElement('script');
+            leafletJS.src = 'https://unpkg.com/leaflet@1.7.1/dist/leaflet.js';
+            leafletJS.onload = function() {
+                // Map initialization code
+                const map = L.map('map').setView([51.505, -0.09], 13); // Default to London coordinates
+
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                }).addTo(map);
+
+                // Add a marker - replace with your actual location
+                L.marker([51.505, -0.09]).addTo(map)
+                    .bindPopup('My Location<br>123 Main Street, City')
+                    .openPopup();
+            };
+            document.head.appendChild(leafletJS);
+        }
+
+        // Initialize the map when the page loads
+        window.onload = initMap;
+    </script>
+</body>
+
+</html>
